@@ -11,6 +11,9 @@ public class Product {
         this.salesPrice = salesPrice;
     }
 
+    public Product() {
+    }
+
     public long getProductId() {
         return productId;
     }
@@ -34,5 +37,4 @@ public class Product {
     public void setSalesPrice(double salesPrice) {
         this.salesPrice = salesPrice;
     }
-
 }
