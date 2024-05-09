@@ -64,4 +64,19 @@ public class ProductManager {
 
         return rows == 1 ? true : false;
     }
+
+    public boolean delete(long productId) throws SQLException {
+        //delete a product by its id
+        Connection connection = DBUtilites.getConnection();
+
+        String sql = "DELETE FROM product WHERE productId = ?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+
+        statement.setLong(1, productId);
+
+        int rows = statement.executeUpdate();
+        connection.close();
+
+        return rows == 1 ? true : false;
+    }
 }

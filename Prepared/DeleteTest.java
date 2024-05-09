@@ -7,7 +7,7 @@ import library.DBUtilites;
 
 public class DeleteTest {
     public static void main(String[] args) throws SQLException {
-            
+
         Connection connection = DBUtilites.getConnection();
         String sql = "DELETE FROM product WHERE productId = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
